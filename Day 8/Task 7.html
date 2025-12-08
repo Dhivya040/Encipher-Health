@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Application Form</title>
+</head>
+<body>
+
+  <header>
+    <h1>Job Application Form</h1>
+    <p>Fill out the details below to apply for your desired position.</p>
+  </header>
+
+  <main>
+    <section>
+      <form>
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="name">Full Name:</label><br>
+          <input type="text" id="name" name="name" required><br><br>
+
+          <label for="email">Email Address:</label><br>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="phone">Phone Number:</label><br>
+          <input type="tel" id="phone" name="phone" required><br><br>
+
+          <label for="address">Address:</label><br>
+          <textarea id="address" name="address" rows="3" cols="40"></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Job Details</legend>
+
+          <label for="position">Position Applied For:</label><br>
+          <input type="text" id="position" name="position" required><br><br>
+
+          <label for="experience">Years of Experience:</label><br>
+          <input type="number" id="experience" name="experience" min="0" max="50"><br><br>
+
+          <label for="skills">Key Skills:</label><br>
+          <textarea id="skills" name="skills" rows="3" cols="40"></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Resume Upload</legend>
+
+          <label for="resume">Upload Your Resume (PDF/DOC):</label><br>
+          <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required><br><br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Info</legend>
+
+          <label for="comments">Cover Letter / Comments:</label><br>
+          <textarea id="comments" name="comments" rows="4" cols="40"></textarea><br><br>
+        </fieldset>
+
+        <input type="submit" value="Submit Application">
+        <input type="reset" value="Clear Form">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Career Portal | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
