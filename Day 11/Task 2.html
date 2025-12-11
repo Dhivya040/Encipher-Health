@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selectors Example</title>
+    <style>
+    input[type="text"] {
+      border: 2px solid green;
+    }
+    input[type="email"] {
+      border: 2px dashed blue;
+    }
+    input[type="password"] {
+      border: 2px dotted red;
+    }
+    input[placeholder] {
+      background-color: #f0f8ff;
+    }
+    </style>
+</head>
+<body>
+    <h2>Form with Attribute Selectors</h2>
+    <form>
+    <label>Username:</label>
+    <input type="text" placeholder="Enter name"><br><br>
+
+    <label>Email:</label>
+    <input type="email" placeholder="Enter email"><br><br>
+
+    <label>Password:</label>
+    <input type="password" placeholder="Enter password"><br><br>
+
+    <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
