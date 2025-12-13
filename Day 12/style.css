@@ -1,0 +1,49 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+h1{
+    color: orangered;
+}
+section{
+    margin-bottom: 35px;
+}
+/* task1 */
+.block-box{
+    background-color: lightcoral;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.inline-box{
+    background-color: lightgreen;
+    padding: 15px;
+}
+.inline-block-box{
+    display: inline-block;
+    background-color: lightsalmon;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+/* task2 */
+.hidden-display{
+    display: none;
+}
+/* task3 */
+.hidden-visiblity{
+    visibility: hidden;
+    background-color: aquamarine;
+    padding: 10px;
+}
+/* task4 */
+.inline-to-block{
+    display: block;
+    background-color: lightseagreen;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+.block-to-inline{
+    display: inline;
+    background-color: lightcoral;
+    padding: 5px;
+}
