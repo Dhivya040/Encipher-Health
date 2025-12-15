@@ -1,125 +1,172 @@
 body {
+  font-family: sans-serif;
+  background-color: #fff;
   margin: 0;
   padding: 0;
-  font-family: "Times New Roman", Times, serif;
-  background-color: #e8e8e8;
+  color: #202122;
 }
 
-.newspaper {
-  width: 80%;
-  max-width: 900px;
-  background-color: #f7f7f7;
-  margin: 30px auto;
-  padding: 20px 25px;
-  border: 1px solid #000;
-  box-shadow: 0 0 5px #999;
+.topbar {
+  background: #f8f9fa;
+  text-align: right;
+  padding: 8px 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
 }
 
+.page-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 230px;
+  gap: 20px;
+  padding: 20px;
+  align-items: start;
+}
 
-.top-bar {
+/* --- MAIN CONTENT --- */
+main {
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 28px;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+/* --- TOP NAV (Tabs + Sidebar same line) --- */
+.top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 10px solid #000;
-  padding-bottom: 8px;
+  /* border-bottom: 1px solid #a2a9b1; */
+  padding-bottom: 6px;
+  margin-bottom: 12px;
 }
 
-
-.top-bar h1 {
-  font-family: "Georgia", serif;
-  font-size: 2em;
-  text-align: center;
-  flex-grow: 1;
+/* Tabs (Left Side) */
+.tabs a {
+  color: #0645ad;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 10px;
+  font-size: 14px;
 }
 
-.box {
-  border: 2px solid #000;
-  padding: 5px 12px;
-  background: black;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  font-size: 0.9em;
-  width:15%
+.tabs a.active {
+  border-bottom: 2px solid #202122;
+  padding-bottom: 2px;
 }
 
-.main-title {
-  text-align: center;
-  margin-top: 20px;
-  border-bottom: 10px solid #000;
-  padding-bottom: 10px;
+/* Sidebar (Right Side) */
+.subnav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.main-title h2 {
-  font-size: 3em;
-  font-weight: bold;
-  margin: 0;
+.subnav a {
+  text-decoration: none;
+  color: #0645ad;
+  font-weight: 500;
+  font-size: 14px;
 }
 
-.main-title p {
-  font-size: 1.3em;
-  margin: 5px 0 0;
-  letter-spacing: 1px;
+.subnav a.active {
+  border-bottom: 2px solid #202122;
+  padding-bottom: 2px;
 }
 
-.middle {
+.subnav .tools {
+  font-size: 13px;
+  color: #202122;
+}
+
+.source {
+  color: #54595d;
+  font-size: 14px;
+}
+
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2, h3 {
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 4px;
+}
+
+.edit {
+  font-size: 13px;
+  color: #0645ad;
+  margin-left: 5px;
+}
+
+blockquote {
+  border-left: 3px solid #ccc;
+  margin: 10px 0;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+/* --- RIGHT SIDEBAR (Appearance Box) --- */
+.appearance-box {
+  border: none;
+  border-radius: 4px;
+  
+  font-size: 14px;
+  padding: 10px;
+  color: #202122;
+  position: sticky;
+  top: 20px;
+}
+
+.appearance-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 20px;
+  align-items: center;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
 }
 
-.column {
-  width: 30%;
+.hide-link {
+  font-size: 12px;
+  color:black;
+  background-color:#ccc;
+  text-decoration: none;
 }
 
-.column h3 {
-  text-transform: uppercase;
-  font-size: 1em;
+.hide-link:hover {
+  text-decoration: underline;
+}
+
+.appearance-section {
+  margin-bottom: 10px;
+}
+
+.section-title {
   font-weight: bold;
+  margin: 6px 0 4px 0;
+  color: #202122;
 }
 
-.column p {
-  font-size: 0.9em;
-  text-align: justify;
-  line-height: 1.5;
+.appearance-box label {
+  font-size: 13px;
+  cursor: pointer;
 }
 
-.image {
-  width: 35%;
-  text-align: center;
-}
-
-.image img {
-  width: 100%;
-  height: 500px;
-  border: 1px solid #000;
+.appearance-box input[type="radio"] {
+  margin-right: 4px;
 }
 
 
-.bottom-text {
-  text-align: justify;
-  font-size: 1em;
-  font-family: "Times New Roman", Times, serif;
-}
-
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  border-top: 2px solid #000;
-  padding-top: 15px;
-  margin-top: 30px;
-}
-
-.foot-box {
-  width: 32%;
-  text-align: center;
-  font-weight: bold;
-  font-size: 0.9em;
-  border: 2px solid #000;
-
-  padding: 5px;
-  background-color: #000;
-  color: #fff;
-}
