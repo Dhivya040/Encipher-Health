@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e6f3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 25px;
+  width: 400px;
+}
+
+h1 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 65%;
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.add-btn {
+  margin-left: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-btn:hover {
+  background-color: #0056cc;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  gap: 10px;
+}
+
+.check i {
+  color: green;
+  font-size: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;            
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check {
+  color: green;
+  font-size: 18px;
+}
+
+.check-box {
+  color: green;
+  font-size: 18px;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+.text {
+  font-size: 16px;
+  color: #333;
+}
+
+.completed .text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.remove {
+  background-color: #ff3b3b;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.remove:hover {
+  background-color: #e32d2d;
+}
