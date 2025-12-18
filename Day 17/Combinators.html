@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Descendant p{
+            background-color:brown;
+        }
+
+        .Child > p{
+            background-color: blueviolet;
+        }
+        .next + p{
+            background-color: chocolate;
+        }
+        .subsequent ~ p{
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <h2>Descendant Combinator</h2>
+    <div class="Descendant">
+    <p>Paragraph 1 in the div</p>
+    <p>Paragraph 2 in the div</p>
+    <section><p>Paragraph 3 in the div</p></section>
+    </div>
+    <p>Paragraph 4 not in a div</p>
+    <p>Paragraph 5 not in a div</p>
+    <hr>
+
+    <h2>Child Combinator</h2>
+    <div class="Child">
+    <p>Paragraph 1 in the div</p>
+    <p>Paragraph 2 in the div</p>
+    <section>
+        <p>Paragraph 3 in the div</p>
+    </section>
+    <p>Paragraph 4 in the div</p>
+    </div>
+    <hr>
+
+    <h2>Next-Sibling Combinator</h2>
+    <div class="next">
+    <p>Paragraph 1 in the div</p>
+    <p>Paragraph 2 in the div</p>
+    </div>
+    <p>Paragraph 3 after a div</p>
+    <p>Paragraph 4 after a div</p>
+    <hr>
+
+    <h2>Subsequent Combinator</h2>
+    <div class="subsequent">
+    <p>Paragraph 2</p>
+    </div>
+    <p>Paragraph 3</p>
+    <code>Some code</code>
+    <p>Paragraph 4</p>
+    </div>
+    <hr>
+
+    
+</body>
+</html>

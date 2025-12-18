@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link{
+            color:chartreuse;
+        }
+        a:visited{
+            color:blue;
+        }
+        a:hover{
+            color:blueviolet;
+        }
+        a:active{
+            color:crimson;
+        }
+        div{
+                background-color: rgb(155, 30, 239);
+                color: white;
+                text-align: left;
+            }
+        div:hover{
+            background-color: rgb(236, 39, 42);
+        }
+        input:hover,input:focus{
+            background-color: rgb(224, 156, 18);
+        }
+        a.special:hover{
+            color: rgb(29, 183, 230);
+            font-size: 40px;
+        }
+        .first:First-child{
+            color: rgba(68, 16, 16, 0.829);
+        }
+        p em:First-Child{
+            color: rgb(13, 20, 214);
+        }
+        q:lang(no){
+            quotes: "~" "~";
+        }
+    </style>
+</head>
+<body>
+    <h2>Pseudo Classes</h2>
+    <a href="https://www.google.com/search?q=youtube&rlz=1C1CHBF_enIN1137IN1138&oq=youtube&gs_lcrp=EgZjaHJvbWUqEAgAEAAYgwEY4wIYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyDQgBEC4YgwEYsQMYgAQyDQgCEAAYgwEYsQMYgAQyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyDQgGEAAYgwEYsQMYgAQyEAgHEAAYgwEYsQMYgAQYigXSAQk0NzAwajBqMTWoAgiwAgHxBUlFnLFU4o6X&sourceid=chrome&ie=UTF-8" target="_blank">This is a link</a>
+    <hr>
+
+    <h2>Hover</h2>
+    <p>Mouse over the div element</p>
+    <div>Mouse Over Me</div>
+    <hr>
+
+    <h2>Focus</h2>
+    <form>First name: <input type="text" name="fname"><br><br>
+    Last name: <input type="text" name="lname"><br><br>
+    <input type="submit" value="Submit">
+    </form>
+    <hr>
+
+    <p><a class="special" href="https://www.wikipedia.org/">Pseudo class</a></p>
+    <p><a href="https://www.wikipedia.org/">Normal Text</a></p>
+    <hr>
+
+    <h2>First-Child</h2>
+    <p>I am a <em>Strong </em>Person</p>
+    <hr>
+
+    <h2>Lang</h2>
+    <p>Quote<q lang="no">Be Happy</q>Quote</p>
+</body>
+</html>
