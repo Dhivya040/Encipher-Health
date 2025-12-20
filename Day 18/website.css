@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+.preview-bar{
+    width: 100%;
+    height: 63px;
+
+    background: #262626;
+    color:#ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+}
+
+.preview-bar .logo{
+    font-size: 20px;
+    color:#fff;
+    font-weight: 600;
+    align-items: center;
+}
+
+.preview-bar .dot {
+  color: #63d457;
+}
+
+.preview-bar .template {
+  color: #ccc;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.preview-bar .right i {
+  color: #999;
+  font-size: 18px;
+  margin-left: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.preview-bar .right i:hover {
+  color: #fff;
+}
+
+.preview-bar .right .active {
+  background: #63d457;
+  color: #fff;
+  padding: 21px 30px;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.navbar .logo span {
+  color: #007bff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #007bff;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 45%;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  color: #777;
+  font-size: 16px;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* ----------------------------- */
+/* IMAGINE FEATURES SECTION */
+/* ----------------------------- */
+
+.features {
+  text-align: center;
+  padding: 100px 0;
+  background: #fff;
+}
+
+.features .section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111;
+}
+
+.features .subtitle {
+  color: #777;
+  font-size: 16px;
+  margin: 10px auto 60px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Grid layout */
+.features .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+}
+
+/* Feature Box */
+.feature-box {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 60px 25px 40px;
+  position: relative;
+  transition: all 0.3s ease;
+  max-width: 340px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Floating Icon Circle */
+.icon {
+  width: 70px;
+  height: 70px;
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text */
+.feature-box h3 {
+  margin-top: 45px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+.feature-box p {
+  font-size: 15px;
+  color: #666;
+  margin: 15px 0 20px;
+  line-height: 1.6;
+}
+
+.feature-box a {
+  color: #3b82f6;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.feature-box a:hover {
+  text-decoration: underline;
+}
+
+/* Hover */
+.feature-box:hover {
+  background: #3b82f6;
+  color: #fff;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-box:hover .icon {
+  background: #fff;
+  color: #3b82f6;
+}
+
+.feature-box:hover a {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
