@@ -1,0 +1,185 @@
+.header{
+    background-color: rgb(249, 215, 221);
+} 
+.top-bar{
+    display: flex;
+    justify-content: space-evenly;
+    gap:40px;
+    margin-bottom: 70px;
+    padding: 20px;
+}
+.top-bar a{
+    text-decoration: none;
+    align-items: center;
+    color: black;
+}
+.logo img{
+    height:100px;
+    width: 140px;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    gap:90px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+.account{
+    display: flex;
+    gap:70px;
+    margin-top: 30px;
+    margin-left: 70px;
+    font-size:20px;
+}
+.box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+    column-gap: 40px;
+    align-items: center;
+}
+.content{
+    margin-left: 300px;
+}
+.content p{
+    font-size: 20px;
+    white-space:nowrap;
+    font-size: 20px;
+    font-weight: 600px;
+}
+.content a{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 200px;
+    text-decoration: none;
+}
+.content img{
+    width:55px;
+    height: auto;
+}
+.content h2{
+    white-space:nowrap;
+    font-size: 20px;
+    font-weight: 600px;
+}
+.content h3{
+    white-space:nowrap;
+    font-size: 20px;
+    font-weight: 600px;
+}
+.category{
+    padding: 70px 120px 70px 120px;
+}
+.Image{
+    display: grid;
+    padding: 40px 0px 40px 0px;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 10px;
+}
+.Image img{
+    width:200px;
+    height:200px;
+    border-radius: 20px;
+}
+.Image p{
+    text-align: center;
+    margin-right: 37px;
+}
+/* .care p{
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+    margin-top: 28px;
+} */
+ .code{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+ }
+ .code .para{
+   margin-top: 30px;
+ }
+ .code .icons{
+   margin-top: 30px;
+ }
+.grooming{
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 20px;
+}
+.grooming a{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 1px;
+    padding: 6px;
+}
+.grooming .button{
+    margin-top: 100px;
+}
+.grooming h2{
+    margin-top: 30px;
+}
+.pictures img{
+    width: 250px;
+    height: 200px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.services{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 30px 120px 30px 120px;
+    column-gap: 30px;
+    background-color:rgb(249, 215, 221);
+    margin-bottom: 90px;
+}
+.icon1 button{
+    margin: 20px;
+    border-radius: 20px;
+    font-size:12px;
+}
+.food{
+    padding:150px;
+    background-color:rgb(249, 215, 221);
+}
+.feed{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 10px;
+    margin-top:20px ;
+}
+.feed img{
+    width:200px;
+    height:200px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.box{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.box img{
+    width: 100px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    
+}
+.items{
+    border:2px solid black;
+    border-radius: 10px;
+    width: 200px;
+    height: 250px;
+    padding: 20px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;  
+}
+.items span:nth-child(2) {
+  text-decoration: line-through;
+  color: #777;
+  margin-left: 5px;
+}
