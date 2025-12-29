@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greetUser() {
+            let hour = prompt("Enter the current hour (0-23):");
+            if (hour >= 0 && hour < 12) {
+                alert("Good Morning!");
+            }else if (hour >= 12 && hour < 18) {
+                alert("Good Afternoon!");
+            }else{ 
+            alert("Good Evening!");
+            }
+        }
+        greetUser();
+
+        let num =prompt("Enter a number:");
+        if (num > 0) {
+            alert("Positive");
+        }else if (num < 0) {
+            alert("Negative");
+        }else alert("Zero");
+
+        let total = prompt("Enter total classes:");
+        let attended =prompt("Enter attended classes:");
+        let percentage = (attended / total) * 100;
+        if (percentage >= 75) {
+            alert("Eligible (Attendance: " + percentage + "%)");
+        }else {
+            alert("Not Eligible (Attendance: " + percentage + "%)");
+        }
+
+        let str = prompt("Enter a string:").toLowerCase();
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+            if ("aeiou".includes(str[i])){
+                count++;
+            }
+        }
+        alert("Number of vowels: " + count);
+
+        let num1 = prompt("Enter the first number:");
+        let num2 = prompt("Enter the second number:");
+        let num3 = prompt("Enter the third number:");
+        let smallest;
+        if (num1 <= num2 && num1 <= num3) {
+            smallest = num1;
+        } else if (num2 <= num1 && num2 <= num3) {
+            smallest = num2;
+        } else {
+            smallest = num3;
+        }
+        alert("The smallest number is: " + smallest);
+
+        let items =prompt("Enter number of items:");
+        let price = prompt("Enter price per item:");
+        let totalbill = items * price;
+            alert("Total Bill Amount:" + totalbill);
+
+        let year = prompt("Enter a year:");
+        if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)){
+            alert(year + " is a leap year");
+        }else{
+            alert(year + " is not a leap year");
+        }
+
+        let limit = prompt("Enter a limit:");
+        let oddcount = 0;
+        for (let i = 1; i <= limit; i++) {
+            if (i % 2 !== 0){ 
+                oddcount++;
+            }
+        }
+        alert("Count of odd numbers: " + oddcount);
+
+        let m1 = prompt("Enter marks in Subject 1:");
+        let m2 = prompt("Enter marks in Subject 2:");
+        let m3 = prompt("Enter marks in Subject 3:");
+        let tot = m1 + m2 + m3;
+        let avg = tot / 3;
+        alert("Total: " + tot + ", Average: " + avg);
+        if (avg >= 40) {
+            alert("Result: Pass");
+        }else alert("Result: Fail");
+
+        let n =prompt("Enter a number:");
+        let sum = 0;
+        while (n > 0) {
+            sum += n % 10;
+            n = Math.floor(n / 10);
+        }
+        alert("Sum of digits: " + sum);
+
+        let a = prompt("Enter a number:");
+        if (a % 3 === 0 && a % 5 === 0) {
+            alert("Divisible by both 3 and 5");
+        }else if (a % 3 === 0) {
+            alert("Divisible by 3");
+        }else if (a % 5 === 0){
+            alert("Divisible by 5");
+        }else 
+            alert("Not divisible by 3 or 5");
+    </script>
+</body>
+</html>
