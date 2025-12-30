@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greetuser(){
+            let username=prompt("Enter your name:");
+            alert("Hello,"+username+"Welcome!");
+        }
+        greetuser();
+
+        function evenodd(){
+            let num=prompt("Enter a number");
+            if(num%2==0){
+                alert(num+ " is an Even number");
+            }else {
+                alert(num+ " is an Odd number");
+            }
+        }
+        evenodd();
+
+        function calculator(){
+            let num1=prompt("Enter num1:");
+            let num2=prompt("Enter num2:");
+            let operator=prompt("Enter operator(+,-,*,/):");
+            let result;
+            if(operator==="+"){
+                result=num1+num2;
+            }else if(operator==="-"){
+                result=num1-num2;
+            }else if(operator==="*"){
+                result=num1*num2;
+            }else if(operator==="/"){
+                if(num2!==0){
+                    result=num1/num2;
+                }else{
+                    alert("Error");
+                    return;
+                }
+            }else {
+                alert("Invalid operator!");
+                return;
+            }
+            alert("Result: "+result);
+        }
+        calculator();
+
+        function checkage(){
+            let age=prompt("Enter your age:");
+            if(age>=18){
+                alert("You are eligible to vote!");
+            }else{
+                alert("Sorry, you are not aligible");
+            }
+        }
+        checkage();
+
+        function generatetable(){
+            let num=prompt("Enter a number:");
+            console.log("Multiplication Table of " + num + ":");
+            for(let i=1;i<=10;i++){
+                console.log(num+ " x " + i + " = " + (num*i));
+            }
+        }
+        generatetable();
+
+        function calculatesum(a){
+            let sum=0;
+            let a=number(prompt("Enter a number:"));
+            let total=calculatesum(a);
+            for(let i=1;i<=a;i++){
+                sum+=i;
+            }
+            return sum;
+            alert("sum of numbers from 1 to "+a+" is " + total);
+        }
+
+        function validatepassword(){
+            let pass=prompt("Enter your password:");
+            if(pass.length>=8){
+                alert("Validate Password!");
+            }else{
+                alert("Invalid Password");
+            }
+        }
+        validatepassword();
+
+        function gradecalculator(){
+            let marks=prompt("Enter your marks:");
+            let grade;
+            if(marks>=90){
+                grade="A";
+            }else if(marks>=75){
+                grade="B";
+            }else if(marks>=50){
+                grade="C";
+            }else{
+                grade="Fail";
+            }
+            alert("Your Grade: " + grade);
+        }
+        gradecalculator();
+
+        function findlargest() {
+            let num1 = prompt("Enter the first number:");
+            let num2 = prompt("Enter the second number:");
+            let num3 = prompt("Enter the third number:");
+            let largest;
+            if (num1 >= num2 && num1 >= num3) {
+                largest = num1;
+            } else if (num2 >= num1 && num2 >= num3) {
+                largest = num2;
+            } else {
+                largest = num3;
+            }
+            alert("The largest number is: " + largest);
+        }
+        findlargest();
+
+        function loginsystem() {
+        const defaultusername = "admin";
+        const defaultpassword = "12345";
+            let username = prompt("Enter your username:");
+            let password = prompt("Enter your password:");
+            if (username === defaultusername && password === defaultpassword) {
+                alert("Login Successful! Welcome, " + username + ".");
+            } else {
+            alert("Invalid credentials! Please try again.");
+            }
+        }
+        loginsystem();
+
+        function countevennumbers() {
+            let limit = prompt("Enter a limit:");
+            let count = 0;
+            for (let i = 1; i <= limit; i++) {
+                if (i % 2 === 0) {
+                    count++;
+                }
+            }
+            alert("There are " + count + " even numbers between 1 and " + limit + ".");
+        }
+        countevennumbers();      
+
+        function reversenumber() {
+            let num = prompt("Enter a number:");
+            let reversed = 0;
+            while (num !== 0) {
+                let digit = num % 10;         
+                reversed = reversed * 10 + digit; 
+                num = Math.floor(num / 10);   
+            }
+            alert("Reversed number is: " + reversed);
+        }
+        reversenumber();
+
+        function simpleinterest() {
+            let principal = prompt("Enter the principal amount:");
+            let rate = prompt("Enter the rate of interest:");
+            let time = prompt("Enter the time in years:");
+            let SI = (principal * rate * time) / 100;
+            alert("Simple Interest = " + SI);
+        }
+        simpleinterest();
+
+        function numberguessinggame() {
+            const secretNumber = 4; 
+            let guess = parseInt(prompt("Guess the number between 1 and 10:"));
+            if (guess === secretNumber) {
+                alert("Correct! You guessed it!");
+            } else if (guess > secretNumber) {
+                alert("Too high! Try again.");
+            } else {
+                alert("Too low! Try again.");
+            }
+        }
+        numberguessinggame();
+        
+        function checkprime() {
+            let num = prompt("Enter a number:");
+            let isprime = true;
+            if (num <= 1) {
+                isprime = false;
+            } else {
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    isprime = false;
+                    break;
+                }
+            }
+            }
+            if (isprime) {
+                alert(num + " is a Prime number.");
+            } else {
+                alert(num + " is Not a Prime number.");
+            }
+        }
+        checkprime();
+
+        function findfactorial() {
+            let num = prompt("Enter a number:");
+            let fact = 1;
+            for (let i = 1; i <= num; i++) {
+                fact *= i;
+            }
+            alert("Factorial of " + num + " is " + fact);
+        }
+        findfactorial();
+
+        function countdigits() {
+            let num = prompt("Enter a number:");
+            let count = 0;
+            while (num !== 0) {
+                num = Math.floor(num / 10);
+                count++;
+            }
+            alert("The number has " + count + " digits.");
+        }
+        countdigits();
+
+        function menuprogram() {
+            let choice = prompt("Choose an operation:").toLowerCase();
+            let num1 = prompt("Enter first number:");
+            let num2 = prompt("Enter second number:");
+            let result;
+            switch (choice) {
+                case "add":
+                    result = num1 + num2;
+                    break;
+                case "subtract":
+                    result = num1 - num2;
+                    break;
+                case "multiply":
+                    result = num1 * num2;
+                    break;
+                default:
+                    alert("Invalid choice!");
+                    return;
+            }
+            alert("Result: " + result);
+        }
+        menuprogram();
+
+        function sumevenodd() {
+            let limit = prompt("Enter a limit:");
+            let evensum = 0, oddsum = 0;
+        for (let i = 1; i <= limit; i++) {
+            if (i % 2 === 0) {
+                evensum += i;
+            } else {
+                oddsum += i;
+            }
+        }
+        alert("Sum of Even Numbers: " + evensum + "Sum of Odd Numbers: " + oddsum);
+        }
+        sumevenodd();
+
+        function exitconfirmation() {
+            let choice = confirm("Do you really want to exit?");
+            if (choice) {
+                alert("You chose to exit. Goodbye!");
+            } else {
+                alert("You chose to stay. Welcome back!");
+            }
+        }
+        exitconfirmation();
+    </script>
+</html>
