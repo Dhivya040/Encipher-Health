@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let username=prompt("Enter your username:");
+       username=username.trim().toLowerCase();
+       alert("New:" + username);
+       
+       let email=prompt("Enter your email:");
+       if(email.includes("@")&&email.includes(".")){
+        alert("Valid Email");
+       }else{
+        alert("Invalid Email");
+       }
+
+       let sentence=prompt("Enter a sentence:");
+       let count=0;
+       for(let char of sentence){
+        if(char!==" "){
+            count++;
+        }
+        alert("Number of characters: " + count);
+       }
+
+       let para=prompt("Enter a paragraph:");
+       let words=para.trim().split(/\s+/);
+       alert("Word Count: " + words.length);
+
+       let text=prompt("Enter a string:");
+       if(text.length>0){
+        alert("First: " + text[0] + "Last: " + text[text.length-1]);
+       }else{
+        alert("Empty string");
+       }
+
+       let sent=prompt("Enter a sentence:");
+       let old=prompt("Enter word:");
+       let newword=prompt("Enter new:");
+       let result=sent.replace(old,newword);
+       alert("Updated sentence: " + result);
+
+       let input=prompt("Enter text:");
+        if (input.length<5 || input.length>20) {
+            alert("Error: Length should be between 5 and 20 characters!");
+        } else {
+            alert("Valid input:" + input);
+        }
+
+        let str=prompt("Enter a string:");
+        let c=0;
+        for (let ch of str) {
+            if (ch>='A'&& ch<='Z')c++;
+        }
+        alert("Uppercase letters: " + c);
+
+        let s=prompt("Enter a string:");
+        let clean="";
+        for (let ch of s) {
+            if (/[a-zA-Z0-9 ]/.test(ch))clean+=ch;
+        }
+        alert("Clean String: " + clean);
+
+        let str1=prompt("Enter a string:");
+        let start=prompt("Enter word to check start:");
+        let end=prompt("Enter word to check end:");
+        if (str1.startsWith(start) && str1.endsWith(end)) {
+            alert("Starts and ends correctly");
+        } else {
+            alert("Condition not met");
+        }
+
+        let sentence2=prompt("Enter a sentence:");
+        let word=sentence2.split(" ");
+        let longest="";
+        for (let w of word) {
+            if (w.length > longest.length) longest=w;
+        }
+        alert("Longest word: " + longest);
+
+        let sent2=prompt("Enter a sentence:");
+        let words2=sent2.toLowerCase().split(" ");
+        for (let i=0;i<words2.length;i++) {
+            words2[i]=words2[i].charAt(0).toUpperCase()+words2[i].slice(1);
+        }
+        alert("Title Case: " + words2.join(" "));
+
+        let mobile=prompt("Enter mobile number:");
+        let masked=mobile.slice(-4).padStart(mobile.length, "*");
+        alert("Masked Number: " +masked);
+
+        let inputStr=prompt("Enter a string:");
+        let repeated="";
+        for (let i=0;i<inputStr.length;i++){
+            let ch=inputStr[i];
+            if (inputStr.indexOf(ch) !== inputStr.lastIndexOf(ch)&&!repeated.includes(ch)) {
+                repeated+=ch + " ";
+            }
+        }
+        alert("Repeated Characters: " +(repeated || "None"));
+
+        let txt=prompt("Enter a string:").toLowerCase();
+        let vowels=0,consonants=0;
+        for (let ch of txt){
+            if (/[a-z]/.test(ch)){
+                if ("aeiou".includes(ch)) vowels++;
+                else consonants++;
+            }
+        }
+        alert("Vowels: " + vowels + "\nConsonants: " + consonants);
+
+        let line=prompt("Enter a sentence:");
+        let words3=line.split(" ");
+        let unique=[];
+        for (let w of words3){
+            if (!unique.includes(w)) unique.push(w);
+        }
+        alert("Without Duplicates: " + unique.join(" "));
+
+        let a=prompt("Enter first string:").toLowerCase().replace(/\s+/g, "");
+        let b=prompt("Enter second string:").toLowerCase().replace(/\s+/g, "");
+        if (a.split("").sort().join("") === b.split("").sort().join("")){
+            alert("Anagram");
+        } else {
+            alert("Not Anagram");
+        }
+
+        let s1=prompt("Enter first string:");
+        let s2=prompt("Enter second string:");
+        if (s1.trim()===s2.trim()){
+            alert("Strings are equal");
+        } else {
+            alert("Strings are not equal");
+        }
+
+        let mixed=prompt("Enter a string with numbers:");
+        let numbers="";
+        for (let ch of mixed){
+            if (!isNaN(ch)&&ch!==" ")numbers+=ch;
+        }
+        alert("Extracted Numbers: " + numbers);
+
+        let pass=prompt("Enter a password:");
+        if (pass.length >= 8 && /[A-Z]/.test(pass) && /[0-9]/.test(pass)){
+            alert("Strong Password");
+        } else {
+            alert("Weak Password");
+        }
+    </script>
+</body>
+</html>
