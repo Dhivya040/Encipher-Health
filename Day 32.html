@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <task1> -->
+    <button onclick="postAlert()">Click</button>
+    <br>
+    <br>
+    <!-- <task3> -->
+    <button onclick="colorChange()">Changed</button>
+    <br>
+    <!-- <task4> -->
+    <p id="para">This is a paragraph</p>
+    <button onclick="showPara()">Show</button>
+    <button onclick="hidePara()">Hide</button>
+    <br>
+    <!-- <task5> -->
+    <div id="textdiv">Double-Click me!</div>
+    <br>
+    <!-- <task6> -->
+    <p id="text">Double-click to increase size</p>
+    <br>
+    <!-- <task7> -->
+    <div id="box">Change color</div>
+    <br>
+    <!-- <task8> -->
+    <button id="btn">Hover</button>
+    <div id="tooltip">Tooltip Text</div>
+    <br>
+    <!-- <task9> -->
+    <div id="coordibox">Move mouse</div>
+    <br>
+    <!-- <task10> -->
+    <div id="colorBox">Move mouse inside</div>
+    <br>
+    <!-- <task13> -->
+    <p>Press any key:</p>
+    <p id="keyDisplay"></p>
+    <br>
+    <!-- <task14> -->
+    <input id="colorInput" placeholder="Type something">
+    <br>
+    <!-- <task15> -->
+    <form id="myForm">
+        <input tupe="text" placeholder="Type something">
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <!-- <task16> -->
+    <form id="checkForm">
+        <input type="textInput" type="text" placeholder="Enter something">
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <!-- <task17> -->
+    <select id="dropdown">
+        <option>Dog</option>
+        <option>Cow</option>
+        <option>Goat</option>
+    </select>
+    <p id="result"></p>
+    <br>
+    <!-- <task17> -->
+    <input id="focusInput" type="text" placeholder="Focus here">
+    <p id="message">You are welcome</p>
+    <br>
+    <!-- <task18> -->
+    <select id="colorSelect">
+        <option value="white">White</option>
+        <option value="lightblue">Blue</option>
+        <option value="lightgreen">Green</option>
+        <option value="pink">Pink</option>
+    </select>
+    <br>
+    <!-- <task19> -->
+    <input id="focusInput" placeholder="Focus on me">
+    <br>
+    <!-- <task20> -->
+    <input id="msgInput" type="text">
+    <p id="msg" style="display:none;">You are typing</p>
+    <br>
+    <!-- <task21> -->
+    <input id="liveInput" type="text">
+    <p id="output"></p>
+    <br>
+    <!-- <task22> -->
+    <input id="charInput" type="text">
+    <p id="count"></p>
+    <br>
+    <!-- <task23> -->
+    <button id="btn1">Click Me</button>
+    <p id="info"></p>
+    <br>
+    <!-- <task24> -->
+    <button class="multiBtn">Button 1</button>
+    <button class="multiBtn">Button 2</button>
+    <p id="whichBtn"></p>
+    <br>
+    <!-- <task25> -->
+    <div id="parent">Parent</div>
+    <div id="child">Child</div>
+    </div>
+    <br>
+    <!-- <task26> -->
+    <div id="outer">Outer</div>
+    <div id="inner">Inner</div>
+    </div>
+    <br>
+    <!-- <task27> -->
+    <div id="parent">Parent</div>
+    <div id="child">Child</div>
+    </div>
+    <br>
+    <!-- <task28> -->
+    <div id="parent">Parent</div>
+    <button id="child">Child</button>
+    </div>
+    <br> 
+</body>
+    <script>
+        // <task1>
+        function postAlert(){
+            alert("Clicked");
+        }
+        // <task2>
+        window.onload=function(){
+            console.log("Page Loaded");
+        }
+        // <task3>
+        function colorChange(){
+            document.body.style.backgroundColor="pink";
+        }
+        // <task4>
+        function showPara(){
+            document.getElementById("para").style.display="block";
+        }
+        function hidePara(){
+            document.getElementById("para").style.display="none";
+        }
+        // <task5>
+        let texdiv=document.getElementById("textdiv")
+        texdiv.addEventListener("dblclick",function(){
+            texdiv.innerText="Text Changed!";
+        });
+        // <task6>
+        const text=document.getElementById("text");
+        text.addEventListener("dblclick",function(){
+            text.style.fontSize="24px";
+        });
+        // <task7>
+        let box=document.getElementById("box");
+        box.addEventListener("mouseenter",()=>box.style.background="purple");
+        box.addEventListener("mouseleave",()=>box.style.background="green");
+        // <task8>
+        let btn=document.getElementById("btn");
+        let tooltip=document.getElementById("tooltip");
+        btn.addEventListener("mouseover",()=>tooltip.style.visibility="visible");
+        btn.addEventListener("mouseout",()=>tooltip.style.visibility="hidden");
+        // <task9>
+        let coordibox = document.getElementById("coordibox");
+        coordibox.addEventListener("mousemove", e=>{
+            console.log(`X: ${e.offsetX},Y:${e.offsetY}`);
+        });
+        // <task11>
+        document.addEventListener("contextmenu",e=>e.preventDefault());
+        // <task12>
+        document.addEventListener("contextmenu",e=>{
+            e.preventDefault();
+            alert("Right-click detected!");
+        });
+        // <task13>
+        document.addEventListener("keydown",e=> {
+            document.getElementById("keyDisplay").innerText="You Pressed: "+e.key;
+        });
+        // <task14>
+        document.getElementById("colorInput").addEventListener("keyup",e=>e.target.style.color="blue");
+        // <task15>
+        document.getElementById("myForm").addEventListener("submit",e=>{
+            e.preventDefault();
+            alert("Form submitted!");
+        });
+        // <task16>
+        document.getElementById("checkForm").addEventListener("submit",e=>{
+            let input=document.getElementById("textInput");
+            if(input.value.trim()===""){
+                e.preventDefault();
+                alert("Input cannot be empty!");
+            }
+        });
+        // <task17>
+        document.getElementById("dropdown").addEventListener("change",function(){
+            document.getElementById("result").innerText="Selected:"+this.value;
+        });
+        // <task18>
+        document.getElementById("colorSelect").addEventListener("change",e=>{
+            document.body.style.background = e.target.value||"white";
+        });
+        // <task19 & task20>
+        let input=document.getElementById("focusInput");
+        let message=document.getElementById("message");
+        input.addEventListener("focus",()=>{
+            input.style.border="2px solid green";
+            message.style.display="block"
+        });
+        input.addEventListener("blur",()=>{
+            input.style.border="";
+            message.style.display="none"
+        });
+        // <task21>
+        document.getElementById("liveInput").addEventListener("input",function(e){
+            document.getElementById("output").innerText=e.target.value;
+        });
+        // <task22>
+        document.getElementById("charInput").addEventListener("input", function(e){
+            document.getElementById("count").innerText="Characters: " + e.target.value.length;
+        });
+        // <task23>
+        document.getElementById("btn1").addEventListener("click",function(e){
+            document.getElementById("info").innerText="Event: " + e.type + ", Triggered by: "+e.target.tagName;
+        });
+        // <task24>
+        document.querySelectorAll(".multiBtn").forEach(btn => {
+            btn.addEventListener("click", e => document.getElementById("whichBtn").textContent = `${e.target.textContent} clicked`);
+        });
+        // <task25>
+        document.getElementById("parent").addEventListener("click",()=>alert("Parent clicked"));
+        document.getElementById("child").addEventListener("click",()=>alert("Child clicked"));
+        // <task26>
+        document.getElementById("outer").addEventListener("click",()=>alert("Outer clicked"));
+        document.getElementById("inner").addEventListener("click",()=>alert("Inner clicked"));
+        // <task27>
+        document.getElementById("parent").addEventListener("click",()=>alert("Parent clicked"));
+        document.getElementById("child").addEventListener("click",e=>{
+            e.stopPropagation();
+            alert("Child clicked, bubbling stopped");
+        });
+        // <task28>
+        document.getElementById("parent").addEventListener("click",()=>alert("Parent clicked"));
+        document.getElementById("child").addEventListener("click",e=>{
+            e.stopPropagation();
+            alert("Child button clicked-parent prevented");
+        });
+    </script>
+</html>
