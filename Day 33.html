@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <task2> -->
+    <!-- <button id="colorBtn">Change Background</button> -->
+
+    <!-- <task4> -->
+    <!-- <p id="count">0</p> -->
+
+    <!-- <task5> -->
+    <!-- <button id="cancelBtn">Cancel Alert</button> -->
+
+    <!-- <task6> -->
+    <!-- <button id="cancel">Cancel</button> -->
+
+    <!-- <task8> -->
+    <!-- <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <p id="num">0</p> -->
+
+    <!-- <task9> -->
+    <!-- <ul id="list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+    </ul> -->
+
+    <!-- <task10> -->
+    <!-- <p id="msg"></p> -->
+
+    <!-- <task11> -->
+    
+    
+    <!-- <task13> -->
+    <!-- <p id="text">Original Text</p> -->
+</body>
+    <script>
+        // <task1>
+        // setTimeout(()=>{
+        //     console.log("Hello after 3 seconds");
+        // },3000);
+
+        // // <task2>
+        // document.getElementById("colorBtn").addEventListener("click",()=>{
+        //     setTimeout(()=>{
+        //         document.body.style.background="lightblue";
+        //     },5000);
+        // });
+
+        // <task3>
+        // setInterval(()=>{
+        //     console.log(new Date().toLocaleTimeString());
+        // },1000);
+
+        // <task4>
+        // let n=0;
+        // setInterval(()=>{
+        //     n++;
+        //     document.getElementById("count").textContent=n;
+        // },1000);
+
+        // <task5>
+        // let timer = setTimeout(()=>{
+        // alert("10 seconds passed");
+        // },10000);
+        // document.getElementById("cancelBtn").addEventListener("click",()=>{
+        //     clearTimeout(timer);
+        //     alert("Alert cancelled");
+        // });
+
+        // <task6>
+        // let msg=setTimeout(()=>{
+        //     alert("Message shown after 5 seconds");
+        // },5000);
+        // document.getElementById("cancel").addEventListener("click",()=>{
+        //     clearTimeout(msg);
+        // });
+
+        // <task7>
+        // let i=1;
+        // let timer=setInterval(()=>{
+        //     console.log(i++);
+        // },1000);
+        // setTimeout(()=>clearInterval(timer),10000);
+
+        // <task8>
+        // let count=0,interval;
+        // document.getElementById("start").onclick=()=>{
+        //     interval=setInterval(()=>{
+        //         document.getElementById("num").textContent=++count;
+        //     },1000);
+        // };
+        // document.getElementById("stop").onclick=()=>clearInterval(interval);
+
+        // <task9>
+        // document.querySelectorAll("#list li").forEach(li=>{
+        //     li.addEventListener("click",function(){
+        //         this.style.background="lightgreen";
+        //     });
+        // });
+
+        // <task10>
+        // window.addEventListener("resize",()=>{
+        //     if(window.innerWidth < 600){
+        //         document.getElementById("msg").textContent="Mobile View";
+        //     }else{
+        //         document.getElementById("msg").textContent="Desktop View";
+        //     }
+        // });
+
+        // <task13>
+        // document.addEventListener("DOMContentLoaded",()=>{
+        //     document.getElementById("text").textContent="DOM fully loaded!";
+        // });
+
+        // <task14>
+        // window.addEventListener("load",()=>{
+        //     alert("All images have finished loading!");
+        // });
+    </script>
+</html>
