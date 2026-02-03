@@ -5,18 +5,18 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Contact from "./pages/contact";
 import Privacy from "./pages/Privacy";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout";
+import Checkout from "./pages/checkout";
 import Tips from "./pages/Tips";
 
 const App = () => {
   return (
     <Router>
       <div className="app-container">
-        <Navbar />
+        <Navbar/>
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -27,7 +27,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
-            <Route path="/tips" element={<Tips />} />
+            <Route path="/Tips" element={<Tips />} />
           </Routes>
         </main>
         <Footer />
